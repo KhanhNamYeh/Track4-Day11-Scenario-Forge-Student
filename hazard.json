@@ -1,0 +1,47 @@
+{
+ "format": "avsim-studio/1",
+ "params": {
+  "cutT0": 2.978,
+  "cutDur": 3.938,
+  "cutV": 12.943,
+  "cutDs": -4.556,
+  "pedT0": 12.7,
+  "pedV": 1.49,
+  "busGo": 18.797,
+  "tgT": 0.831,
+  "cutGap": 14.636,
+  "pedGap": 4.314,
+  "mu": 0.8,
+  "pedLook": 1,
+  "cutBrake": 2.644,
+  "civil": true
+ },
+ "policy": {},
+ "hazards": [
+  {
+   "x": 131.079,
+   "side": "S",
+   "v": 1.868,
+   "t0": 0.0,
+   "trig": 31.162,
+   "type": "ped"
+  }
+ ],
+ "ego": "planner",
+ "space": {
+  "h0_x": [
+   110,
+   300
+  ],
+  "h0_v": [
+   0.9,
+   2.0
+  ],
+  "h0_trig": [
+   12,
+   35
+  ]
+ },
+ "exposure": 0.02,
+ "why": "Người đi bộ băng ngang giữa đoạn đường không có vạch (jaywalking). h0_trig 12-35 m: khoảng cách từ xe ta lúc người đó bước xuống lòng đường; người thật thường chấp nhận khe 2-3 s, ở 12,5 m/s tương đương 25-37 m, nên 12 m là khe rất gắt và 35 m là khe thoải mái. h0_v 0,9-2,0 m/s: 0,9 là người già/đi chậm, 1,2-1,5 là tốc độ đi bộ bình thường của người lớn, 2,0 là đi nhanh/chạy chậm (dưới ngưỡng 2,5 m/s của is_feasible). h0_x 110-300 m: toàn bộ đoạn đường phía sau chỗ xe buýt đỗ trước vạch qua đường (cận dưới 90 m theo LIMITS, nhưng x<110 là khu vực xe đỗ và xe buýt nên bỏ). exposure 0,02 là GIẢ ĐỊNH bậc độ lớn: khoảng 1 chuyến trong 50 chuyến đô thị có một người băng ngang tự do trước mặt xe ở đoạn không có vạch. Chưa có số đo thật; cần thay bằng tần suất từ dữ liệu dashcam/quan sát hiện trường. exposure được chọn trước khi chạy mine; các khoảng của space nằm trong phạm vi có căn cứ ở trên và không được chọn để làm rắc rối trông nguy hiểm hơn."
+}
